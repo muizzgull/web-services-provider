@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS — Web Services Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── LOADING SCREEN ─── -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">NEXUS</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <div class="loader-text">Initializing Studio...</div>
+    </div>
+  </div>
+
+  <!-- ─── CURSOR ─── -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">NEXUS<span class="logo-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#demos">Demos</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Start Project</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services">Services</a>
+      <a href="#demos">Demos</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Start Project</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal"><span class="badge-dot"></span> Available for Projects</div>
+      <h1 class="hero-title reveal">
+        We Build<br/>
+        <span class="gradient-text">Digital Experiences</span><br/>
+        That Convert.
+      </h1>
+      <p class="hero-sub reveal">From stunning landing pages to complex web apps — we craft pixel-perfect websites that grow your business. <strong>50+ clients. 200+ projects delivered.</strong></p>
+      <div class="hero-actions reveal">
+        <a href="#demos" class="btn-primary">View Our Work <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn-ghost">Get a Free Quote</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-target="200">0</span><span>+</span><div class="stat-label">Projects</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="50">0</span><span>+</span><div class="stat-label">Clients</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="98">0</span><span>%</span><div class="stat-label">Satisfaction</div></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="5">0</span><span> yrs</span><div class="stat-label">Experience</div></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator"><div class="scroll-dot"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ─── MARQUEE ─── -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>E-Commerce</span><span class="sep">✦</span>
+      <span>Landing Pages</span><span class="sep">✦</span>
+      <span>Web Apps</span><span class="sep">✦</span>
+      <span>Dashboards</span><span class="sep">✦</span>
+      <span>Portfolios</span><span class="sep">✦</span>
+      <span>SaaS Platforms</span><span class="sep">✦</span>
+      <span>Blogs & CMS</span><span class="sep">✦</span>
+      <span>Booking Systems</span><span class="sep">✦</span>
+      <span>Restaurant Sites</span><span class="sep">✦</span>
+      <span>Brand Identities</span><span class="sep">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>E-Commerce</span><span class="sep">✦</span>
+      <span>Landing Pages</span><span class="sep">✦</span>
+      <span>Web Apps</span><span class="sep">✦</span>
+      <span>Dashboards</span><span class="sep">✦</span>
+      <span>Portfolios</span><span class="sep">✦</span>
+      <span>SaaS Platforms</span><span class="sep">✦</span>
+      <span>Blogs & CMS</span><span class="sep">✦</span>
+      <span>Booking Systems</span><span class="sep">✦</span>
+      <span>Restaurant Sites</span><span class="sep">✦</span>
+      <span>Brand Identities</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">What We Do</div>
+        <h2>Services Built for <span class="gradient-text">Growth</span></h2>
+        <p>End-to-end digital solutions tailored to your business goals</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon"><i class="fas fa-store"></i></div>
+          <h3>E-Commerce</h3>
+          <p>Full-featured online stores with seamless checkout, inventory management, and mobile-first design.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Shopify / WooCommerce</li>
+            <li><i class="fas fa-check"></i> Custom Cart & Checkout</li>
+            <li><i class="fas fa-check"></i> Payment Integration</li>
+            <li><i class="fas fa-check"></i> Product Management</li>
+          </ul>
+          <a href="#demos" class="service-link">See Demo <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal featured" data-delay="100">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Landing Pages</h3>
+          <p>High-converting landing pages built to capture leads, boost sales, and tell your brand story.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> CRO-Optimized Layout</li>
+            <li><i class="fas fa-check"></i> A/B Test Ready</li>
+            <li><i class="fas fa-check"></i> Lead Forms & CRM</li>
+            <li><i class="fas fa-check"></i> Analytics Tracking</li>
+          </ul>
+          <a href="#demos" class="service-link">See Demo <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon"><i class="fas fa-cubes"></i></div>
+          <h3>Web Applications</h3>
+          <p>Custom web apps — dashboards, portals, SaaS products, booking systems, and internal tools.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> React / Next.js</li>
+            <li><i class="fas fa-check"></i> User Auth & Roles</li>
+            <li><i class="fas fa-check"></i> API Integration</li>
+            <li><i class="fas fa-check"></i> Database & Backend</li>
+          </ul>
+          <a href="#demos" class="service-link">See Demo <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="300">
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3>Brand & Design</h3>
+          <p>Logo design, brand identity systems, UI/UX design, and visual style guides for your business.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Logo & Identity</li>
+            <li><i class="fas fa-check"></i> UI/UX Prototyping</li>
+            <li><i class="fas fa-check"></i> Style Guide</li>
+            <li><i class="fas fa-check"></i> Social Media Kit</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="400">
+          <div class="service-icon"><i class="fas fa-search"></i></div>
+          <h3>SEO & Performance</h3>
+          <p>Technical SEO, Core Web Vitals optimization, and speed improvements that drive organic traffic.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> On-Page SEO</li>
+            <li><i class="fas fa-check"></i> Page Speed Boost</li>
+            <li><i class="fas fa-check"></i> Schema Markup</li>
+            <li><i class="fas fa-check"></i> Monthly Reports</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="500">
+          <div class="service-icon"><i class="fas fa-headset"></i></div>
+          <h3>Maintenance & Support</h3>
+          <p>Ongoing website maintenance, updates, security monitoring, and dedicated support plans.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 24/7 Monitoring</li>
+            <li><i class="fas fa-check"></i> Regular Backups</li>
+            <li><i class="fas fa-check"></i> Security Patches</li>
+            <li><i class="fas fa-check"></i> Priority Support</li>
+          </ul>
+          <a href="#pricing" class="service-link">View Plans <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DEMOS ─── -->
+  <section id="demos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Live Demos</div>
+        <h2>Website <span class="gradient-text">Templates & Examples</span></h2>
+        <p>Click any card to preview the full interactive demo</p>
+      </div>
+      <div class="demo-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+        <button class="filter-btn" data-filter="landing">Landing Page</button>
+        <button class="filter-btn" data-filter="webapp">Web App</button>
+        <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+        <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+      </div>
+      <div class="demos-grid">
+
+        <div class="demo-card reveal" data-category="ecommerce" data-demo="ecommerce">
+          <div class="demo-preview">
+            <div class="demo-mockup ecommerce-mockup">
+              <div class="mock-nav"><div class="mock-logo"></div><div class="mock-links"><span></span><span></span><span></span></div></div>
+              <div class="mock-hero-shop">
+                <div class="mock-hero-text"><div class="mock-h1"></div><div class="mock-h2"></div><div class="mock-btn"></div></div>
+                <div class="mock-hero-img"></div>
+              </div>
+              <div class="mock-products">
+                <div class="mock-product"><div class="mock-prod-img"></div><div class="mock-prod-info"><span></span><span></span></div></div>
+                <div class="mock-product"><div class="mock-prod-img"></div><div class="mock-prod-info"><span></span><span></span></div></div>
+                <div class="mock-product"><div class="mock-prod-img"></div><div class="mock-prod-info"><span></span><span></span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <span class="demo-tag">E-Commerce</span>
+            <h3>Luxe Fashion Store</h3>
+            <p>Premium clothing store with cart, filters, wishlist & checkout</p>
+            <div class="demo-meta">
+              <span><i class="fas fa-star"></i> Shopify-ready</span>
+              <span><i class="fas fa-mobile-alt"></i> Mobile First</span>
+            </div>
+            <button class="demo-btn" onclick="openDemo('ecommerce')">Preview Demo <i class="fas fa-external-link-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="demo-card reveal" data-category="landing" data-demo="saas">
+          <div class="demo-preview">
+            <div class="demo-mockup saas-mockup">
+              <div class="mock-nav dark-nav"><div class="mock-logo cyan"></div><div class="mock-cta-btn"></div></div>
+              <div class="mock-hero-saas">
+                <div class="mock-badge-pill"></div>
+                <div class="mock-big-title"><span></span><span></span></div>
+                <div class="mock-sub-text"></div>
+                <div class="mock-hero-btns"><div class="btn-primary-m"></div><div class="btn-ghost-m"></div></div>
+              </div>
+              <div class="mock-features-row">
+                <div class="mock-feat"><div class="feat-icon"></div><span></span><span></span></div>
+                <div class="mock-feat"><div class="feat-icon"></div><span></span><span></span></div>
+                <div class="mock-feat"><div class="feat-icon"></div><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <span class="demo-tag">Landing Page</span>
+            <h3>SaaS Product Page</h3>
+            <p>High-converting SaaS landing with hero, features, pricing & CTA</p>
+            <div class="demo-meta">
+              <span><i class="fas fa-chart-line"></i> CRO Optimized</span>
+              <span><i class="fas fa-bolt"></i> Fast Load</span>
+            </div>
+            <button class="demo-btn" onclick="openDemo('saas')">Preview Demo <i class="fas fa-external-link-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="demo-card reveal" data-category="restaurant" data-demo="restaurant">
+          <div class="demo-preview">
+            <div class="demo-mockup restaurant-mockup">
+              <div class="mock-rest-hero">
+                <div class="rest-overlay"></div>
+                <div class="rest-title"><span></span><span></span></div>
+                <div class="rest-reserve-btn"></div>
+              </div>
+              <div class="mock-menu-tabs"><span class="active-tab"></span><span></span><span></span></div>
+              <div class="mock-menu-items">
+                <div class="menu-item-m"><div class="item-img"></div><div class="item-info"><span></span><span></span></div></div>
+                <div class="menu-item-m"><div class="item-img"></div><div class="item-info"><span></span><span></span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <span class="demo-tag">Restaurant</span>
+            <h3>Fine Dining Restaurant</h3>
+            <p>Elegant restaurant site with menu, gallery, reservations & reviews</p>
+            <div class="demo-meta">
+              <span><i class="fas fa-calendar"></i> Booking System</span>
+              <span><i class="fas fa-images"></i> Gallery</span>
+            </div>
+            <button class="demo-btn" onclick="openDemo('restaurant')">Preview Demo <i class="fas fa-external-link-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="demo-card reveal" data-category="webapp" data-demo="dashboard">
+          <div class="demo-preview">
+            <div class="demo-mockup dashboard-mockup">
+              <div class="mock-sidebar"><div class="side-logo"></div><div class="side-items"><span></span><span class="active-side"></span><span></span><span></span><span></span></div></div>
+              <div class="mock-main-content">
+                <div class="mock-stats-row"><div class="stat-card-m"></div><div class="stat-card-m"></div><div class="stat-card-m"></div></div>
+                <div class="mock-chart-area"></div>
+                <div class="mock-table-preview"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <span class="demo-tag">Web App</span>
+            <h3>Analytics Dashboard</h3>
+            <p>Admin dashboard with charts, tables, user management & reports</p>
+            <div class="demo-meta">
+              <span><i class="fas fa-chart-bar"></i> Live Charts</span>
+              <span><i class="fas fa-lock"></i> Auth Ready</span>
+            </div>
+            <button class="demo-btn" onclick="openDemo('dashboard')">Preview Demo <i class="fas fa-external-link-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="demo-card reveal" data-category="portfolio" data-demo="portfolio">
+          <div class="demo-preview">
+            <div class="demo-mockup portfolio-mockup">
+              <div class="port-hero-area">
+                <div class="port-avatar"></div>
+                <div class="port-name"><span></span><span></span></div>
+              </div>
+              <div class="port-work-grid">
+                <div class="port-work-item tall"></div>
+                <div class="port-work-item"></div>
+                <div class="port-work-item"></div>
+                <div class="port-work-item wide"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <span class="demo-tag">Portfolio</span>
+            <h3>Creative Portfolio</h3>
+            <p>Stunning portfolio for designers, photographers & creatives</p>
+            <div class="demo-meta">
+              <span><i class="fas fa-th"></i> Grid Gallery</span>
+              <span><i class="fas fa-envelope"></i> Contact Form</span>
+            </div>
+            <button class="demo-btn" onclick="openDemo('portfolio')">Preview Demo <i class="fas fa-external-link-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="demo-card reveal" data-category="landing" data-demo="agency">
+          <div class="demo-preview">
+            <div class="demo-mockup agency-mockup">
+              <div class="agency-hero">
+                <div class="agency-badge-m"></div>
+                <div class="agency-title-m"><span></span><span></span><span></span></div>
+                <div class="agency-btns-m"><span></span><span></span></div>
+              </div>
+              <div class="agency-clients"><span></span><span></span><span></span><span></span></div>
+              <div class="agency-cards-row"><div class="a-card"></div><div class="a-card"></div><div class="a-card"></div></div>
+            </div>
+          </div>
+          <div class="demo-info">
+            <span class="demo-tag">Landing Page</span>
+            <h3>Agency Homepage</h3>
+            <p>Bold agency homepage with services, case studies & contact</p>
+            <div class="demo-meta">
+              <span><i class="fas fa-award"></i> Award Style</span>
+              <span><i class="fas fa-play"></i> Video Ready</span>
+            </div>
+            <button class="demo-btn" onclick="openDemo('agency')">Preview Demo <i class="fas fa-external-link-alt"></i></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DEMO MODAL ─── -->
+  <div id="demoModal" class="demo-modal">
+    <div class="modal-overlay" onclick="closeDemo()"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-area">
+          <span id="modalTag" class="demo-tag">E-Commerce</span>
+          <h3 id="modalTitle">Luxe Fashion Store</h3>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-action-btn" onclick="closeDemo()"><i class="fas fa-times"></i> Close</button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Demo content injected here -->
+      </div>
+      <div class="modal-footer">
+        <p>Like this style? <strong>We'll build it for you.</strong></p>
+        <a href="#contact" class="btn-primary" onclick="closeDemo()">Get This Website <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PROCESS ─── -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">How It Works</div>
+        <h2>From Idea to <span class="gradient-text">Live Website</span></h2>
+        <p>A simple, transparent process from day one to launch</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step reveal" data-delay="0">
+          <div class="step-number">01</div>
+          <div class="step-icon"><i class="fas fa-comments"></i></div>
+          <div class="step-content">
+            <h3>Discovery Call</h3>
+            <p>We learn about your business, goals, target audience and vision. Free 30-min consultation.</p>
+            <div class="step-time"><i class="fas fa-clock"></i> Day 1</div>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal" data-delay="150">
+          <div class="step-number">02</div>
+          <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <div class="step-content">
+            <h3>Design & Wireframe</h3>
+            <p>We create mockups and design prototypes. You review and approve before we write a single line of code.</p>
+            <div class="step-time"><i class="fas fa-clock"></i> Days 2–5</div>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal" data-delay="300">
+          <div class="step-number">03</div>
+          <div class="step-icon"><i class="fas fa-code"></i></div>
+          <div class="step-content">
+            <h3>Development</h3>
+            <p>Our team builds your website with clean code, optimized performance, and full responsiveness.</p>
+            <div class="step-time"><i class="fas fa-clock"></i> Days 6–18</div>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal" data-delay="450">
+          <div class="step-number">04</div>
+          <div class="step-icon"><i class="fas fa-vial"></i></div>
+          <div class="step-content">
+            <h3>Review & Revisions</h3>
+            <p>You test the site, request changes, and we refine until it's exactly what you envisioned.</p>
+            <div class="step-time"><i class="fas fa-clock"></i> Days 19–22</div>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+        <div class="process-step reveal" data-delay="600">
+          <div class="step-number">05</div>
+          <div class="step-icon"><i class="fas fa-rocket"></i></div>
+          <div class="step-content">
+            <h3>Launch & Support</h3>
+            <p>We deploy your site, set up analytics, and provide 30 days of free post-launch support.</p>
+            <div class="step-time"><i class="fas fa-clock"></i> Day 23+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TECH STACK ─── -->
+  <section id="tech">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Tech Stack</div>
+        <h2>Built With <span class="gradient-text">Modern Tools</span></h2>
+      </div>
+      <div class="tech-grid reveal">
+        <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="tech-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="tech-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+        <div class="tech-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="tech-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="tech-item"><i class="fab fa-php"></i><span>PHP</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" /><span>Next.js</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /><span>MongoDB</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><span>MySQL</span></div>
+        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /><span>Figma</span></div>
+        <div class="tech-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+        <div class="tech-item"><i class="fab fa-shopify"></i><span>Shopify</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRICING ─── -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Pricing</div>
+        <h2>Transparent <span class="gradient-text">Pricing Plans</span></h2>
+        <p>No hidden fees. No surprises. Just great websites.</p>
+      </div>
+      <div class="pricing-toggle reveal">
+        <span class="toggle-label active" id="monthlyLabel">One-Time</span>
+        <div class="toggle-switch" id="pricingToggle" onclick="togglePricing()">
+          <div class="toggle-thumb"></div>
+        </div>
+        <span class="toggle-label" id="monthlyLabel2">Monthly <span class="save-badge">Save 20%</span></span>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal" data-delay="0">
+          <div class="pricing-header">
+            <div class="plan-icon"><i class="fas fa-seedling"></i></div>
+            <h3>Starter</h3>
+            <p>Perfect for small businesses & startups</p>
+            <div class="price-display">
+              <div class="price one-time">$799</div>
+              <div class="price monthly hidden">$79<span>/mo</span></div>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Up to 5 pages</li>
+            <li><i class="fas fa-check"></i> Mobile Responsive</li>
+            <li><i class="fas fa-check"></i> Contact Form</li>
+            <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+            <li><i class="fas fa-check"></i> Google Analytics</li>
+            <li><i class="fas fa-check"></i> 30 Days Support</li>
+            <li class="disabled"><i class="fas fa-times"></i> E-Commerce</li>
+            <li class="disabled"><i class="fas fa-times"></i> Custom Animations</li>
+            <li class="disabled"><i class="fas fa-times"></i> CMS Integration</li>
+          </ul>
+          <a href="#contact" class="pricing-cta ghost-cta">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured-pricing reveal" data-delay="100">
+          <div class="popular-badge">⚡ Most Popular</div>
+          <div class="pricing-header">
+            <div class="plan-icon"><i class="fas fa-star"></i></div>
+            <h3>Professional</h3>
+            <p>For growing businesses that need more</p>
+            <div class="price-display">
+              <div class="price one-time">$1,899</div>
+              <div class="price monthly hidden">$149<span>/mo</span></div>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Up to 15 pages</li>
+            <li><i class="fas fa-check"></i> Mobile Responsive</li>
+            <li><i class="fas fa-check"></i> Advanced Forms</li>
+            <li><i class="fas fa-check"></i> Full SEO Package</li>
+            <li><i class="fas fa-check"></i> Google Analytics + Search Console</li>
+            <li><i class="fas fa-check"></i> 90 Days Support</li>
+            <li><i class="fas fa-check"></i> E-Commerce (up to 50 products)</li>
+            <li><i class="fas fa-check"></i> Custom Animations</li>
+            <li><i class="fas fa-check"></i> CMS Integration</li>
+          </ul>
+          <a href="#contact" class="pricing-cta primary-cta">Get Started</a>
+        </div>
+
+        <div class="pricing-card reveal" data-delay="200">
+          <div class="pricing-header">
+            <div class="plan-icon"><i class="fas fa-crown"></i></div>
+            <h3>Enterprise</h3>
+            <p>For large businesses & complex projects</p>
+            <div class="price-display">
+              <div class="price one-time">Custom</div>
+              <div class="price monthly hidden">Custom</div>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> Unlimited Pages</li>
+            <li><i class="fas fa-check"></i> Custom Web Application</li>
+            <li><i class="fas fa-check"></i> Full E-Commerce</li>
+            <li><i class="fas fa-check"></i> Advanced SEO Strategy</li>
+            <li><i class="fas fa-check"></i> Multi-Language Support</li>
+            <li><i class="fas fa-check"></i> 1 Year Priority Support</li>
+            <li><i class="fas fa-check"></i> API Integrations</li>
+            <li><i class="fas fa-check"></i> Custom Admin Dashboard</li>
+            <li><i class="fas fa-check"></i> Dedicated Project Manager</li>
+          </ul>
+          <a href="#contact" class="pricing-cta ghost-cta">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="pricing-note reveal">
+        <i class="fas fa-shield-alt"></i>
+        <p>All plans include <strong>free domain setup</strong>, <strong>SSL certificate</strong>, <strong>hosting configuration</strong>, and a <strong>money-back guarantee</strong> if you're not satisfied with our initial mockup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Client Reviews</div>
+        <h2>What Our <span class="gradient-text">Clients Say</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal" data-delay="0">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"NEXUS built our e-commerce store from scratch. Sales went up 340% in the first 3 months. Incredible work and super fast turnaround."</p>
+          <div class="client-info">
+            <div class="client-avatar" style="background: linear-gradient(135deg, #00d4ff, #0070ff)">S</div>
+            <div><strong>Sarah Mitchell</strong><span>CEO, StyleHive Fashion</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="100">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Our restaurant booking site is stunning. We get compliments from customers all the time. The team was professional and delivered on time."</p>
+          <div class="client-info">
+            <div class="client-avatar" style="background: linear-gradient(135deg, #ff6b35, #ff2d6e)">A</div>
+            <div><strong>Ahmed Hassan</strong><span>Owner, Silk Route Restaurant</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="200">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The SaaS dashboard they built handles 5,000+ daily users flawlessly. Complex project delivered perfectly. They truly understand product design."</p>
+          <div class="client-info">
+            <div class="client-avatar" style="background: linear-gradient(135deg, #7c3aed, #00d4ff)">M</div>
+            <div><strong>Marcus Chen</strong><span>CTO, FlowMetrics</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="300">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"I've worked with 3 web agencies before. NEXUS blows them all out of the water. Quality, speed, and communication — all top tier."</p>
+          <div class="client-info">
+            <div class="client-avatar" style="background: linear-gradient(135deg, #10b981, #00d4ff)">L</div>
+            <div><strong>Lena Kowalski</strong><span>Founder, GreenLeaf Wellness</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="400">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"From concept to launch in 2 weeks. Our portfolio site looks better than agencies 10x our budget. Absolutely recommend NEXUS to everyone."</p>
+          <div class="client-info">
+            <div class="client-avatar" style="background: linear-gradient(135deg, #f59e0b, #ff6b35)">R</div>
+            <div><strong>Ryan Torres</strong><span>Creative Director, Pixel & Co.</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="500">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Our Google rankings jumped from page 3 to #1 in under 60 days after their SEO overhaul. ROI was proven within the first month."</p>
+          <div class="client-info">
+            <div class="client-avatar" style="background: linear-gradient(135deg, #ec4899, #7c3aed)">D</div>
+            <div><strong>Diana Patel</strong><span>Marketing Head, TechVault</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">FAQ</div>
+        <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How long does it take to build a website?</span>
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Typical timelines: Landing pages 5–7 days, business websites 2–3 weeks, e-commerce stores 3–4 weeks, custom web applications 4–8 weeks. We always agree on a timeline upfront.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you offer revisions?</span>
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! All plans include unlimited design revisions during the review phase. After launch, the Starter plan includes 2 rounds of revisions, Professional includes 5, and Enterprise is unlimited.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What do you need from me to start?</span>
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We need your brand assets (logo, colors if any), content (text, images), and a clear brief about your goals. Don't have these? We offer content writing and logo design as add-ons.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Will I be able to manage my website myself?</span>
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We build websites on CMS platforms like WordPress or Shopify where possible, and always provide a handover session and documentation so you can update content yourself.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you provide hosting and domain?</span>
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We help you set up hosting and domain registration on your preferred provider (we recommend Cloudflare + Vercel or SiteGround). We configure everything — you own your assets fully.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What's your payment structure?</span>
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We take 50% upfront to begin and 50% upon project completion before handover. For larger projects, we offer milestone-based payment schedules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <div class="section-tag">Let's Talk</div>
+          <h2>Start Your <span class="gradient-text">Project Today</span></h2>
+          <p>Fill out the form and we'll get back to you within 24 hours with a custom quote and timeline.</p>
+          <div class="contact-info-items">
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <div><strong>Email Us</strong><span>hello@nexusstudio.io</span></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+              <div><strong>Call Us</strong><span>+1 (555) 890-2345</span></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+              <div><strong>Hours</strong><span>Mon–Fri, 9am – 6pm EST</span></div>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name *</label>
+                <input type="text" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="john@company.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Company / Business</label>
+                <input type="text" placeholder="Your Company Name" />
+              </div>
+              <div class="form-group">
+                <label>Budget Range</label>
+                <select>
+                  <option value="">Select Budget</option>
+                  <option>Under $500</option>
+                  <option>$500 – $1,000</option>
+                  <option>$1,000 – $2,500</option>
+                  <option>$2,500 – $5,000</option>
+                  <option>$5,000+</option>
+                  <option>Let's discuss</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Project Type</label>
+              <div class="project-type-chips">
+                <span class="chip" onclick="toggleChip(this)">E-Commerce</span>
+                <span class="chip" onclick="toggleChip(this)">Landing Page</span>
+                <span class="chip" onclick="toggleChip(this)">Web App</span>
+                <span class="chip" onclick="toggleChip(this)">Portfolio</span>
+                <span class="chip" onclick="toggleChip(this)">Restaurant</span>
+                <span class="chip" onclick="toggleChip(this)">Blog / CMS</span>
+                <span class="chip" onclick="toggleChip(this)">Redesign</span>
+                <span class="chip" onclick="toggleChip(this)">Other</span>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Tell us about your project *</label>
+              <textarea placeholder="Describe your project, goals, any references you like..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              <span id="submitText">Send Message <i class="fas fa-paper-plane"></i></span>
+              <span id="submitLoading" class="hidden"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+          </form>
+          <div id="formSuccess" class="form-success hidden">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. We'll be in touch within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">NEXUS<span class="logo-dot">.</span></div>
+          <p>We design and develop high-performance websites that help businesses grow online. From concept to launch and beyond.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">E-Commerce Development</a></li>
+            <li><a href="#services">Landing Pages</a></li>
+            <li><a href="#services">Web Applications</a></li>
+            <li><a href="#services">Brand & Design</a></li>
+            <li><a href="#services">SEO & Performance</a></li>
+            <li><a href="#services">Maintenance</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#demos">Portfolio</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get the Newsletter</h4>
+          <p style="font-size:0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Web tips, design trends & special offers — monthly.</p>
+          <form class="footer-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="your@email.com" required />
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </form>
+          <div id="footerSuccess" class="footer-success hidden"><i class="fas fa-check"></i> You're subscribed!</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NEXUS Web Studio. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
