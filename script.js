@@ -555,10 +555,29 @@ window.submitForm = function(e) {
   submitText.classList.add('hidden');
   submitLoading.classList.remove('hidden');
 
-  setTimeout(() => {
-    document.getElementById('contactForm').classList.add('hidden');
-    document.getElementById('formSuccess').classList.remove('hidden');
-  }, 1800);
+  // Collect parameters from inputs to send via EmailJS
+  const userChips = Array.from(document.querySelectorAll('.chip.selected')).map(chip => chip.textContent.trim());
+  
+  const templateParams = {
+    name: document.getElementById('name-input')?.value || document.querySelector('input[type="text"]').value,
+    email: document.getElementById('email-input')?.value || document.querySelector('input[type="email"]').value,
+    phone: document.getElementById('phone-input')?.value || document.querySelector('input[type="tel"]').value,
+    message: document.getElementById('message-input')?.value || document.querySelector('textarea').value,
+    services: userChips.join(', ')
+  };
+
+  // Send elements through EmailJS SDK
+  emailjs.send('service_j6ykc3l', 'template_46t8276', templateParams)
+    .then(() => {
+      document.getElementById('contactForm').classList.add('hidden');
+      document.getElementById('formSuccess').classList.remove('hidden');
+    })
+    .catch((error) => {
+      console.error('EmailJS Error:', error);
+      submitText.classList.remove('hidden');
+      submitLoading.classList.add('hidden');
+      alert('Something went wrong. Please check your configurations or console logs.');
+    });
 };
 
 // ─── FOOTER NEWSLETTER ───

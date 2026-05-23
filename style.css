@@ -6,8 +6,8 @@
    THEME CONFIGURATION & CORE VARIABLES (NEXUS WEB STUDIO OVERRIDE)
    ========================================================================== */
 :root {
-  --bg: #f8f9fa;               /* Soft, clean off-white canvas */
-  --bg-2: #ffffff;             /* Crisp white for section backgrounds */
+  --bg: #eeeeeed8;               /* Soft, clean off-white canvas */
+  --bg-2: #fafafa;             /* Crisp white for section backgrounds */
   --bg-3: #f1f3f5;             /* Subtle gray for inner containers/inputs */
   --text: #0f1115;             /* High-contrast deep charcoal/black */
   --text-muted: #667085;       /* Elegant slate gray for subtext */
